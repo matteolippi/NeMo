@@ -1111,8 +1111,8 @@ class MagpieTTS_ModelInference(MagpieTTS_Model):
         single_space_text = single_space_text.translate(str.maketrans('', '', string.punctuation))
 
         # @shehzeen: Added this to handle some common errors in ASR transcripts
-        single_space_text.replace("h t t p", "http")
-        single_space_text.replace("w w w", "www")
+        single_space_text = single_space_text.replace("h t t p", "http")
+        single_space_text = single_space_text.replace("w w w", "www")
 
         return single_space_text
 
